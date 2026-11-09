@@ -59,3 +59,41 @@
   .prosthesis-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .prosthesis-gallery figure:first-child { grid-column: 1 / -1; }
 }
+
+.project-band {
+  display: grid;
+  place-items: center;
+  padding-inline: 20px;
+  background: #031e45;
+  mask-image: linear-gradient(to right,
+    transparent,
+    rgb(0 0 0 / 8%) 10%,
+    rgb(0 0 0 / 30%) 19%,
+    rgb(0 0 0 / 70%) 28%,
+    #000 40%,
+    #000 60%,
+    rgb(0 0 0 / 70%) 72%,
+    rgb(0 0 0 / 30%) 81%,
+    rgb(0 0 0 / 8%) 90%,
+    transparent);
+}
+.project-band .project-logo {
+  width: min(64%, 330px);
+  height: auto;
+  mask-image: linear-gradient(to right, transparent, #000 13%, #000 87%, transparent);
+}
+.story-followup { grid-column: 2; }
+.project-identity h3 { margin-top: 0; }
+@media (max-width: 849px) {
+  .story-followup { grid-column: 1; }
+}
+.story:has(.story-followup) { row-gap: 30px; }
+
+.process-diagram {
+  background: #f4f8fd;
+}
+.process-diagram img {
+  border-radius: 4px;
+  filter: grayscale(.2) sepia(.24) hue-rotate(168deg) saturate(.92);
+  mix-blend-mode: multiply;
+}
